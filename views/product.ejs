@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Tangerine"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url("images/template_2.png");
+        background-size: cover;
+        overflow: hidden;
+        background-attachment: fixed;
+        background-position: center;
+      }
+      .container {
+        font-family: "Montserrat";
+        margin-left: 880px;
+        margin-top: 250px;
+        color: #6d3a3a;
+        font-weight: bolder;
+        position: relative;
+      }
+      .input {
+        width: 93px;
+        text-align: center;
+        font-family: "Montserrat";
+      }
+      .padding {
+        margin-top: 15px;
+      }
+      .button {
+        width: 300px;
+        height: 38px;
+        margin-top: 15px;
+        background-color: #6d3a3a;
+        color: white;
+        border: none;
+        padding: 5px 5px;
+        font-family: "Montserrat";
+        font-weight: bold;
+        border-radius: 5px;
+      }
+      .button:hover {
+        background-color: #d4af37;
+        color: black;
+      }
+      #orders {
+        color: #6d3a3a;
+        font-family: "Montserrat";
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: large;
+        margin-top: 38px;
+        margin-left: 1000px;
+        position: relative;
+      }
+      #head {
+        text-align: center;
+        color: #996515;
+        font-family: "Tangerine";
+        font-weight: bold;
+        font-size: 50px;
+        position: fixed;
+        margin-left: 45%;
+        margin-top: 20px;
+        text-shadow: #120e03;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="head">CocoaBliss</div>
+    <button onclick="redirectToOrders()" id="orders">Your Orders</button>
+    <form action="/buynow" method="post">
+      <div class="container">
+        In Stock: <%=quantity%>
+        <div class="padding">
+          <input
+            type="number"
+            name="user_qty"
+            placeholder="Quantity"
+            class="input"
+          />
+          <br /><button type="submit" class="button">BUY NOW</button>
+        </div>
+      </div>
+    </form>
+    <script>
+      function redirectToOrders() {
+        // Use window.location to navigate to the "/" route
+        window.location.href = "/view-order";
+      }
+    </script>
+  </body>
+</html>

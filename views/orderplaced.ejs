@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-image: url("images/template_4.png");
+      background-size: cover;
+      overflow: hidden;
+      background-attachment: fixed;
+      background-position: center;
+    }
+    .logout {
+      border-radius: 20px;
+      width: 200px;
+      background-color: #6d3a3a;
+      color: white;
+      position: relative;
+      font-family: "Montserrat";
+      font-weight: bold;
+      margin-top: 580px;
+      left: 580px;
+      display: inline-block; /* Ensure button behaves like a block element */
+      padding: 10px 20px; /* Adjust padding as needed */
+      border: none;
+      cursor: pointer;
+      text-decoration: none; /* Remove default underline */
+    }
+    .logout:hover {
+      background-color: #d4af37;
+      color: black;
+    }
+  </style>
+  <body>
+    <button onclick="redirectToHome()" class="logout">LOGOUT</button>
+
+    <script>
+      function redirectToHome() {
+        // Use window.location to navigate to the "/" route
+        window.location.href = "/";
+      }
+    </script>
+  </body>
+</html>

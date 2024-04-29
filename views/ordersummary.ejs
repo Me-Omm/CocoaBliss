@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url("images/template_3.png");
+        background-size: cover;
+        overflow: hidden;
+        background-attachment: fixed;
+        background-position: center;
+        display: flexbox;
+      }
+      .container {
+        margin-top: 175px;
+        margin-left: 128px;
+        margin-right: 600px;
+        position: relative;
+      }
+      .block {
+        width: 500px;
+        margin-bottom: 50px;
+        padding: 5px;
+        border: none;
+        border-bottom: 1px solid black;
+        font-family: "Montserrat";
+        outline: none;
+        background-color: transparent;
+      }
+      #city {
+        width: 180px;
+        margin-bottom: 50px;
+        padding: 5px;
+        border: none;
+        border-bottom: 1px solid black;
+        font-family: "Montserrat";
+        outline: none;
+        background-color: transparent;
+      }
+      #pin {
+        width: 173px;
+        margin-bottom: 50px;
+        margin-left: 130px;
+        padding: 5px;
+        border: none;
+        border-bottom: 1px solid black;
+        font-family: "Montserrat";
+        outline: none;
+        background-color: transparent;
+      }
+      .cart-titles {
+        position: absolute;
+        font-family: "Montserrat";
+        top: 375px;
+        left: 850px;
+        color: #684040;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .cart-values {
+        position: absolute;
+        font-family: "Montserrat";
+        top: 375px;
+        left: 1150px;
+        text-align: right;
+        color: #684040;
+        font-weight: bold;
+      }
+      #btn {
+        position: absolute;
+        height: 38px;
+        top: 520px;
+        left: 850px;
+        width: 370px;
+        font-family: "Montserrat";
+        background-color: #6d3a3a;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        padding: 5px 5px;
+      }
+      #btn:hover {
+        background-color: #d4af37;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/placeorder" method="post">
+      <div class="container">
+        <br /><input type="text" name="name" placeholder="Name" class="block" />
+        <br /><input
+          type="text"
+          name="flat"
+          placeholder="FLAT/BLOCK"
+          class="block"
+        />
+        <br /><input
+          type="text"
+          name="street"
+          placeholder="STREET"
+          class="block"
+        />
+        <br /><input type="text" name="city" placeholder="City" id="city" />
+        <input type="text" name="pincode" placeholder="PINCODE" id="pin" />
+        <br /><input
+          type="text"
+          name="phone"
+          placeholder="PHONE"
+          class="block"
+        />
+      </div>
+      <div class="cart-titles">
+        Subtotal:
+        <br /><br />Delivery Charges: <br /><br />Total:
+      </div>
+      <div class="cart-values">
+        <% cartDetails.forEach(cartItem => { %> <%= cartItem.cart_total %>
+        <br /><br />49 <br /><br /><%= cartItem.cart_total+49 %> <% }); %>
+      </div>
+      <button type="submit" id="btn">PLACE ORDER</button>
+    </form>
+  </body>
+</html>

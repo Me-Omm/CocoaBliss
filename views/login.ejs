@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-image: url("images/template_1.png");
+        background-size: cover;
+        overflow: hidden;
+        background-attachment: fixed;
+        background-position: center;
+      }
+      .container {
+        margin-left: 800px;
+        margin-top: 250px;
+        font-family: "Montserrat";
+      }
+      .inputs {
+        margin-top: 20px;
+        border: none;
+        border-bottom: 1px solid black;
+        font-family: "Montserrat";
+        outline: none;
+        background-color: transparent;
+      }
+      .button {
+        margin-top: 20px;
+        background-color: #6d3a3a;
+        border: none;
+        color: white;
+        padding: 5px 5px;
+        font-family: "Montserrat";
+        border-radius: 5px;
+      }
+      .signup {
+        color: #6d3a3a;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Login</h1>
+      <form action="/login" method="post">
+        <input
+          type="text"
+          name="username"
+          class="inputs"
+          placeholder="Username"
+          required
+        /><br />
+        <input
+          type="password"
+          name="password"
+          class="inputs"
+          placeholder="Password"
+          required
+        /><br />
+        <button type="submit" class="button">Login</button>
+        <br /><a href="/signup" class="signup">New here? Sign up</a>
+      </form>
+    </div>
+  </body>
+</html>

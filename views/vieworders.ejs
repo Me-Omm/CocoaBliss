@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        .txt{
+            font-weight: bold;
+        }
+        body{
+            background-image: url('/images/template_5.png');
+        }
+        h1{
+            color: #684040;
+            font-family: 'Tangerine';
+            margin-left:45%;
+            margin-top:12px;
+            font-size: 40px;
+        }
+        .container{
+            text-align:left;
+            margin: 0 auto;
+            margin-top:20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            width:600px;
+            padding:20px 20px;
+            font-family: 'DM Sans';
+        }
+        #homepage{
+            color:white;
+            position:absolute;
+            background-color: #684040;
+            border-radius: 20px;
+            text-decoration: none;
+            font-family: 'Montserrat';
+            padding: 10px 10px 10px 10px;
+            margin-left:43%;
+            margin-top: 20px;
+        }
+        #homepage:hover{
+            background-color: #D4AF37;
+            color: black;
+        }
+        .title{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>CocoaBliss</h1>
+    <div class="container">
+        <% orders.forEach(order => { %>
+        <span class="title">Order ID: </span><%=order.order_id%>
+        <br><span class="title">Order Date: </span><%=order.order_date%>
+        <br><span class="title">Total: </span><%= order.order_total %>
+        <br><span class="title">Delivery Status: </span><%= order.delivery_status %>
+        <br><br>
+        <% }); %>
+    </div>
+    <a href="/products" id="homepage">Back to Homepage</a>
+</body>
+</html>
